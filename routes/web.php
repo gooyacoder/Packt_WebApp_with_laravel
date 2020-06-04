@@ -14,16 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome', ['name'=>'Amirhosein', 'records'=>['Completed', 'Successful', 'Failed']]);
+    return view('welcome', ['name'=>'Amirhosein', 'records'=>['Completed', 'Successful', 'Failed'], 
+    'data' => array('title'=>'HTML', 'desc'=>'Learning HTML is fun and interactive.'),
+    'country' => 'Iran']);
 });
 
 
 Route::get('/about', function () {
     return view('about');
-});
+})->name('knowus');
 
 
 Route::get('/service', function () {
     return view('service');
 });
 
+Route::get('posts/create', function(){
+    return 'data created with "get"!';
+});
+
+// Route::post('posts/create', function(){
+//     return 'data created with "post"!';
+// });
+
+// Route::match(['get', 'post'], 'posts/create', function(){
+//     return 'data created with "get"';
+// });

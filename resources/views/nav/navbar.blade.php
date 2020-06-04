@@ -7,7 +7,7 @@
         </div>
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('knowus')}}">About</a></li>
             <li class="nav-item"><a class="nav-link" href="/service">Services</a></li>
         </ul>
     </div>
